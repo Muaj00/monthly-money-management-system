@@ -6,9 +6,56 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.tailwindcss.com"></script>
 </head>
 <body>
-    
+    <header class="">
+        <div class="flex justify-center">
+            <div>
+                <h1 class="text-5xl font-semibold  mt-4">
+                    <span class="text-emerald-500 ">Money</span><span class="text-teal-300">Expens</span>
+                </h1>
+            </div>
+
+            <div>
+                <img class="pl-5 mt-3" src="images/chart.png" width="80px" alt="money-bag">
+            </div>
+        </div>
+    </header>
+
+
+    <main>
+
+        <div class="flex gap-4 justify-around mt-6">
+
+            <div class="image">
+                <img src="images/money.jpg" alt="money" class="w-9/12 h-3/4">
+            </div>
+
+            <div class="bg-slate-200 block">
+                <h1> Income</h1>
+                <div>
+                    <label>Income: <input type="text"></label>
+                </div>
+                <h2> Expenses</h2>
+                <div>
+                    <label>Food: <input type="text"></label>
+                </div>
+                <div>
+                    <label>Rent: <input type="text"></label>
+                </div>
+                <div>
+                    <label>Clothes: <input type="text"></label>
+                </div>
+
+                <button> Calculate</button>
+
+                <div>
+                    <label>Total Expenses: <input type="text"></label>
+                </div>
+            </div>
+        </div>
+    </main>
 
 
 
