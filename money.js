@@ -3,22 +3,26 @@ document.getElementById('calculate-button').addEventListener('click',function(){
    const inputIncome =  document.getElementById('income');
    const textIncome = inputIncome.value;
    const income = parseFloat(textIncome);
+   inputIncome.value = '';
    
 
    const inputfood =  document.getElementById('food');
    const textFoodaAmount = inputfood.value;
    const foodAmount = parseFloat(textFoodaAmount);
+   inputfood.value = '';
     
    
 
    const inputrent =  document.getElementById('rent');
    const textRentAmount = inputrent.value;
    const rentAmount = parseFloat(textRentAmount);
+   inputrent.value = '';
    
 
    const inputclothes =  document.getElementById('clothes');
    const textclothesAmount = inputclothes.value;
    const clothesAmount = parseFloat(textclothesAmount);
+   inputclothes.value = '';
 
    const expenses = foodAmount + rentAmount + clothesAmount;
 
@@ -39,6 +43,7 @@ document.getElementById('calculate-button').addEventListener('click',function(){
     const inputPercent = document.getElementById('parcentage-input');
     const inputPercentText = inputPercent.value;
     const percentageInput = parseFloat(inputPercentText);
+    inputPercent.value = '';
 
     const savingAmount = (balance) * (percentageInput/100);
 
