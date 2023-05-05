@@ -39,27 +39,33 @@ document.getElementById('calculate-button').addEventListener('click',function(){
 
                
                     document.getElementById('save-button').addEventListener('click',function(){
-                        if (balance > expenses)
+                        if (expenses < income)
                         {
                         const inputPercent = document.getElementById('parcentage-input');
                         const inputPercentText = inputPercent.value;
                         const percentageInput = parseFloat(inputPercentText);
                     
                         const savingAmount = (balance) * (percentageInput/100);
-                    
-                        const finalAmount = document.getElementById('final-saving-amount');
-                        const finalAmountText = finalAmount.innerText;
-                        finalAmount.innerText = savingAmount;
-                    
-                        const totalRemainingBalance = balance - savingAmount;
-                    
-                        const remainingBalance = document.getElementById('final-balance');
-                        const remainingBalanceText = remainingBalance.innerText;
-                        remainingBalance.innerText = totalRemainingBalance;
+                            if(savingAmount < balance) {
+                                const finalAmount = document.getElementById('final-saving-amount');
+                                const finalAmountText = finalAmount.innerText;
+                                finalAmount.innerText = savingAmount;
+                            
+                                const totalRemainingBalance = balance - savingAmount;
+                            
+                                const remainingBalance = document.getElementById('final-balance');
+                                const remainingBalanceText = remainingBalance.innerText;
+                                remainingBalance.innerText = totalRemainingBalance;
+                            }
+                            else
+                            {
+                                window.prompt("you can't save money more than your balance");
+                            }
+                       
                     }
                     else
                 {
-                    window.prompt("you can't save money because of your low balance than expenses");
+                    window.prompt("you can't save money because of your high expenses than income");
                 }
 
             });
@@ -73,13 +79,6 @@ document.getElementById('calculate-button').addEventListener('click',function(){
         window.prompt("Enter valid number");
     }
 
-   
-
-
-  
-
-   
-  
    
 });
 
